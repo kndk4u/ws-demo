@@ -1,4 +1,4 @@
-package com.example.demo.serviceimpl;
+package com.example.demo.ServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ public class MyServiceImpl {
 	private SampleDaoImpl repo;
 	
 	public void myService() {
-		repo.printDisplay("Hello World");
+		repo.view("Hello World");
 	}
 
 }
