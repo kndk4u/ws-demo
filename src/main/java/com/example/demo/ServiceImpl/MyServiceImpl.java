@@ -1,9 +1,18 @@
 package com.example.demo.ServiceImpl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.daoImpl.SampleDaoImpl;
+
+@Service
 public class MyServiceImpl {
 	
-	public void pringDisplay(String msg) {
-		System.out.println(msg);
+	@Autowired
+	private SampleDaoImpl repo;
+	
+	public void myService() {
+		repo.printDisplay("Hello World");
 	}
 
 }
