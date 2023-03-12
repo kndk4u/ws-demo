@@ -1,14 +1,18 @@
 package com.example.demo.ServiceImpl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.example.demo.daoImpl.SampleDaoImpl;
 
+@Service
 public class MyServiceImpl {
 	
-	private SampleDaoImpl bauRepo;
+	@Autowired
+	private SampleDaoImpl repo;
 	
-	public void viewService(String msg) {
-		bauRepo.view(msg);
+	public void myService() {
+		repo.view("Hello World");
 	}
-	
 
 }
